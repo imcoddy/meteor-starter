@@ -8,12 +8,12 @@ import { Links } from './links.js';
 import './methods.js';
 
 if (Meteor.isServer) {
-  describe('links methods', function () {
-    beforeEach(function () {
+  describe('links methods', () => {
+    beforeEach(() => {
       Links.remove({});
     });
 
-    it('can add a new link', function () {
+    it('can add a new link', () => {
       const addLink = Meteor.server.method_handlers['links.insert'];
 
       addLink.apply({}, ['meteor.com', 'https://www.meteor.com']);

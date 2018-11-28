@@ -2,10 +2,9 @@
 	"name": "meteor-starter",
 	"private": true,
 	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint --silent",
+		"lint": "eslint . --fix",
 		"start": "meteor run",
-		"test": "meteor test --once --driver-package meteortesting:mocha"
+		"test": "meteor test --once --driver-package meteortesting:mocha --port 3100"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.1.5",

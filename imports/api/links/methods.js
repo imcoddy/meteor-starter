@@ -5,7 +5,7 @@ import { check } from 'meteor/check';
 import { Links } from './links.js';
 
 Meteor.methods({
-  'links.insert'(title, url) {
+  'links.insert': function (title, url) {
     check(url, String);
     check(title, String);
 
