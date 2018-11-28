@@ -2,7 +2,7 @@ import { Links } from '/imports/api/links/links.js';
 import { Meteor } from 'meteor/meteor';
 import './info.html';
 
-Template.info.onCreated(function () {
+Template.info.onCreated(() => {
   Meteor.subscribe('links.all');
 });
 
@@ -13,7 +13,7 @@ Template.info.helpers({
 });
 
 Template.info.events({
-  'submit .info-link-add'(event) {
+  'submit .info-link-add': function (event) {
     event.preventDefault();
 
     const target = event.target;
