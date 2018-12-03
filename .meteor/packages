@@ -31,3 +31,5 @@ accounts-ui
 accounts-password
 aldeed:collection2
 aldeed:autoform
+kurounin:pagination
+kurounin:pagination-blaze
