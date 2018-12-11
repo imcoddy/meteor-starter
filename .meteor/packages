@@ -37,3 +37,4 @@ check
 service-configuration
 sacha:spin
 logging
+react-template-helper
