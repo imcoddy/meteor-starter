@@ -25,8 +25,17 @@ meteortesting:mocha               # A package for writing and running your meteo
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 tap:i18n
 tap:i18n-ui
-twbs:bootstrap
 fortawesome:fontawesome
-aldeed:simple-schema
 accounts-ui
 accounts-password
+aldeed:collection2
+aldeed:autoform
+kurounin:pagination
+kurounin:pagination-blaze
+check
+service-configuration
+sacha:spin
+logging
+react-template-helper
+alexwine:bootstrap-4
+react-meteor-data

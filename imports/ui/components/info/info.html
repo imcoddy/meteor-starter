@@ -8,8 +8,13 @@
         <input type="submit" name="submit" value="Add new link">
       </form>
     </li>
-    {{#each links}}
-      <li><a href="{{url}}" target="_blank">{{title}}</a></li>
-    {{/each}}
+    {{#if isReady}}
+      {{#each documents}}
+        <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+      {{/each}}
+      {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="text-center" onClick=clickEvent}}
+    {{else}}
+      Loading...
+    {{/if}}
   </ul>
 </template>

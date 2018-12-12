@@ -1,8 +1,14 @@
 // All links-related publications
 
-import { Meteor } from 'meteor/meteor';
-import { Links } from '../links.js';
+import {
+	Meteor
+} from 'meteor/meteor';
+import {
+	Links
+} from '../links.js';
+import {
+	publishPagination
+} from 'meteor/kurounin:pagination';
 
-Meteor.publish('links.all', function () {
-  return Links.find();
-});
+publishPagination(Links);
+Meteor.publish('links.all', () => Links.find());
