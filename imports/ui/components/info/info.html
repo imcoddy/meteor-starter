@@ -3,14 +3,16 @@
   <ul>
     <li>
       <form class="info-link-add">
-        <input type="text" name="title" placeholder="Title" required>
-        <input type="url" name="url" placeholder="Url" required>
-        <input type="submit" name="submit" value="Add new link">
+        <input type="text" name="title" placeholder="Title" required="required">
+        <input type="url" name="url" placeholder="Url" required="required">
+        <input class="btn btn-primary" type="submit" name="submit" value="Add new link">
       </form>
     </li>
     {{#if isReady}}
       {{#each documents}}
-        <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+        <li>
+          <a href="{{url}}" target="_blank">{{title}}</a>
+        </li>
       {{/each}}
       {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="text-center" onClick=clickEvent}}
     {{else}}
